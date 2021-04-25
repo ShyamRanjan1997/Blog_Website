@@ -1,4 +1,7 @@
-<%- include("Partials/header.ejs"); -%>
-<h1><%= postTitle2Display %></h1>
-<p><%= postBody2Display%></p>
-<%- include('Partials/footer.ejs'); -%>
+  <%- include("Partials/header.ejs"); -%>
+  <h1><%= postTitle2Display %></h1>
+  <p><%= postBody2Display%></p>
+  <form action="/posts/<%=postTitle2Display%>" method="post">
+    <button type="submit" class="btn btn-primary">Delete</button>
+  </form>
+  <%- include('Partials/footer.ejs'); -%>

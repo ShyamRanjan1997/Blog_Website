@@ -85,6 +85,16 @@ app.get("/posts/:Title", function(req, res) {
   });
 });
 
+app.post("/posts/:Title", function(req, res) {
+  Post.deleteOne({
+    title: req.params.Title
+  }, function(err) {
+    if (err) console.log(err);
+    else{
+      res.redirect("/");
+    }
+  });
+});
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
