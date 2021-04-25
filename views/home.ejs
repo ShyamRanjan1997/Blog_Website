@@ -1,0 +1,9 @@
+<%- include("Partials/header.ejs"); -%>
+
+<% pstArray.forEach((item) => { %>
+  <h1><%= item.pstTitle %></h1>
+  <% let truncatedBody = item.pstBody.substring(0,100) %>
+  <p><%= truncatedBody+" ... " %><a href="/posts/<%=item.pstTitle %>">Read more</a></p>
+<% }); %>
+
+<%- include('Partials/footer.ejs'); -%>

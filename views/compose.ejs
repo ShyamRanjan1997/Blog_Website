@@ -1,0 +1,10 @@
+<%- include("Partials/header.ejs"); -%>
+<h1>Compose</h1>
+<form action="/compose" method="post">
+  <label>Title</label>
+  <input type="text" class="form-control" name="postTitle" placeholder="Give title... " required autofocus>
+  <label>Post</label>
+  <input type="textarea" id="textArea" class="form-control" name="postBody" placeholder="Write post..." required>
+  <button class="w-100 btn btn-lg btn-primary" type="submit">Publish</button>
+</form>
+<%- include('Partials/footer.ejs'); -%>
